@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Favicons in Google Search
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/glachancecmaisonneuve/UserScripts/
 // @version      0.1
 // @description  Faviconize google search
-// @author       You
+// @author       glachance
 // @require      http://code.jquery.com/jquery-latest.js
 // @match        https://www.google.ca/*
 // @match        https://www.google.com/*
