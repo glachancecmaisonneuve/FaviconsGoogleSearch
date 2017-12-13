@@ -5,6 +5,7 @@
 // @description  Faviconize google search
 // @author       glachance
 // @require      http://code.jquery.com/jquery-latest.js
+// @icon         https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png
 // @updateurl    https://github.com/glachancecmaisonneuve/UserScripts/raw/master/FaviconsGoogleSearch.user.js
 // @match        https://www.google.ca/*
 // @match        https://www.google.com/*
