@@ -8,8 +8,8 @@
 // @updateurl    https://github.com/glachancecmaisonneuve/UserScripts/raw/master/FaviconsGoogleSearch.user.js
 // @match        https://www.google.ca/*
 // @match        https://www.google.com/*
-// @include      https://www.google.ca/*
-// @include      https://www.google.com/*
+// @match        https://encrypted.google.com/*
+// @match        https://encrypted.google.ca/*
 // @grant        unsafeWindow
 // ==/UserScript==
 
