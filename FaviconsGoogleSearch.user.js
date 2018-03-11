@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Favicons in Google Search
-// @namespace    https://github.com/glachancecmaisonneuve/UserScripts/
-// @version      0.1
-// @description  Faviconize google search
+// @namespace    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/
+// @version      0.3
+// @description  Faviconize Google Search
 // @author       glachancecmaisonneuve
 // @require      http://code.jquery.com/jquery-latest.js
 // @icon         https://github.com/glachancecmaisonneuve/UserScripts/raw/master/FaviconsGoogleSearchIcon.png
