@@ -3,15 +3,15 @@
 // @namespace    https://github.com/glachancecmaisonneuve/UserScripts/
 // @version      0.1
 // @description  Faviconize google search
-// @author       glachance
+// @author       glachancecmaisonneuve
 // @require      http://code.jquery.com/jquery-latest.js
-// @icon         https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png
+// @icon         https://github.com/glachancecmaisonneuve/UserScripts/raw/master/FaviconsGoogleSearch.png
 // @updateurl    https://github.com/glachancecmaisonneuve/UserScripts/raw/master/FaviconsGoogleSearch.user.js
 // @match        https://www.google.ca/*
 // @match        https://www.google.com/*
 // @match        https://encrypted.google.com/*
 // @match        https://encrypted.google.ca/*
-// @grant        unsafeWindow
+// @match        https://*.google.*/*
 // ==/UserScript==
 
 var favicon_src;
