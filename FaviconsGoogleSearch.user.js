@@ -1,19 +1,7 @@
 // ==UserScript==
 // @name         Favicons Google Search (easy javascript version)
 // @namespace    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/
-// @version      0.4
-// @description  Faviconize Google Search
-// @author       glachancecmaisonneuve
-// @icon         https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
-// @updateurl    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/raw/master/FaviconsGoogleSearch.user.js
-// @match        *://www.google.ca/search*
-// @match        *://www.google.com/search*
-// // ==/UserScript==
-
-// ==UserScript==
-// @name         Favicons Google Search (easy javascript version)
-// @namespace    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/
-// @version      0.4
+// @version      0.5
 // @description  Faviconize Google Search
 // @author       glachancecmaisonneuve
 // @icon         https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
