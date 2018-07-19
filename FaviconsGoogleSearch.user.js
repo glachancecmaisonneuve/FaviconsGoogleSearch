@@ -1,28 +1,63 @@
 // ==UserScript==
-// @name         Favicons in Google Search
+// @name         Favicons Google Search (easy javascript version)
 // @namespace    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/
-// @version      0.3
+// @version      0.4
 // @description  Faviconize Google Search
 // @author       glachancecmaisonneuve
-// @require      http://code.jquery.com/jquery-latest.js
-// @icon         https://github.com/glachancecmaisonneuve/UserScripts/raw/master/FaviconsGoogleSearchIcon.png
-// @updateurl    https://github.com/glachancecmaisonneuve/UserScripts/raw/master/FaviconsGoogleSearch.user.js
-// @match        https://www.google.ca/*
-// @match        https://www.google.com/*
-// @match        https://encrypted.google.com/*
-// @match        https://encrypted.google.ca/*
-// @match        https://*.google.*/*
-// ==/UserScript==
+// @icon         https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
+// @updateurl    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/raw/master/FaviconsGoogleSearch.user.js
+// @match        *://www.google.ca/search*
+// @match        *://www.google.com/search*
+// // ==/UserScript==
 
-var favicon_src;
+// ==UserScript==
+// @name         Favicons Google Search (easy javascript version)
+// @namespace    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/
+// @version      0.4
+// @description  Faviconize Google Search
+// @author       glachancecmaisonneuve
+// @icon         https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
+// @updateurl    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/raw/master/FaviconsGoogleSearch.user.js
+// @match        *://www.google.ca/search*
+// @match        *://www.google.com/search*
+// // ==/UserScript==
 
-favicon_src = function(url) {
-    var domain = new URL(url).host;
-    return "https://www.google.com/s2/favicons?domain=" + domain;
-};
+function favicon_src(url) {
+    try {
+        var domain = new URL(url).host;
+        return "https://www.google.com/s2/favicons?domain=" + domain;
+    } catch (err) {}
+    return "";
+}
 
-$(function() {
-  return $('h3.r > a').each(function() {
-    return $(this).prepend("<img style='position:absolute; overflow:hidden; width: 32px; left: -40px; top: 0px;' src=" + favicon_src($(this).attr("href")) + " />");
-  });
+function imgHTML(urlsite) {
+    return `<img style='position:absolute; overflow:hidden; width:32px; left:-40px; top:0px;' src='${favicon_src(urlsite)}' />`;
+}
+
+Array.from(document.querySelectorAll("h3.r > a")).forEach(function(e) {
+    e.insertAdjacentHTML("beforeBegin", imgHTML(e.href));
 });
+/*
+Array.from(document.querySelectorAll("h3.r > a")).forEach(function(e) {
+    try {
+        var domain = new URL(e.href).host;
+        fetch(`https://www.google.com/s2/favicons?domain=${domain}`, { method: "GET", mode: "cors", cache: "force-cache" })
+            .then(function(response) {
+                if (response.ok) return response.arrayBuffer();
+            })
+            .then(function(ab) {
+                ab = new TextDecoder("utf-8").decode(ab); //to UTF-8 text.
+                ab = unescape(encodeURIComponent(ab)); //to binary-string.
+                return btoa(ab); //BASE64.
+            })
+            .then(function(base64ImgSrc) {
+                let img = document.createElement("img");
+                img.src = base64ImgSrc;
+                img.style = "position:absolute; overflow:hidden; width: 32px; left: -40px; top: 0px;";
+                e.insertAdjacentHTML("beforeBegin", imagehref(e.href));
+            });
+    } catch (err) {
+        console.log(`fail for ${e.href}.  exception: ${err}`);
+    }
+});
+*/
