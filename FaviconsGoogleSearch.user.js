@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Favicons Google Search (easy javascript version)
 // @namespace    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/
-// @version      0.6.2
+// @version      0.6.3
 // @description  Faviconize Google Search
 // @author       glachancecmaisonneuve
 // @icon         https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
@@ -19,7 +19,7 @@ function imgHTML(href) {
             imgurl = new URL(imgurl.getAttribute('u'));
         }
     }
-    return `<img style='position:absolute; overflow:hidden; width:32px; left:-40px; top:0px;' src='https://www.google.com/s2/favicons?domain=${imgurl.origin}' />`;
+    return `<img style='position:absolute; overflow:hidden; width:32px; left:-40px; top:0px;' src='https://www.google.com/s2/favicons?domain=${imgurl.hostname}' />`;
 }
 
 Array.from(document.querySelectorAll("div.r > a")).forEach(function(e) {
