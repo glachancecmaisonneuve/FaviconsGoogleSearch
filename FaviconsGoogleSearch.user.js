@@ -5,7 +5,7 @@
 // @description  Faviconize Google Search
 // @author       glachancecmaisonneuve
 // @icon         https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
-// @updateurl    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/raw/master/FaviconsGoogleSearch.user.js
+// @updateurl    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/blob/master/FaviconsGoogleSearch.user.js
 // @match        *://www.google.ca/search*
 // @match        *://www.google.de/search*
 // @match        *://www.google.com/search*
