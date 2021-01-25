@@ -27,7 +27,7 @@ function imgHTML(hostname) {
 
 function besticon(hostname) {
     req = `https://besticon-demo.herokuapp.com/icon?size=80..120..200&url=${hostname}`;
-    return `<img style="position:absolute; overflow:hidden; width:32px; left:-40px; top:0px;" src="${req}" />`;
+    return `<img style="position:absolute; overflow:hidden; width:32px; left:-40px;" src="${req}" />`;
 }
 
 Array.from(document.querySelectorAll("div.g > div > div > a")).forEach(function(e) {
