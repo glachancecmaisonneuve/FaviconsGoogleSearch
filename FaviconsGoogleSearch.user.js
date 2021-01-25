@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Favicons Google Search (easy javascript version)
 // @namespace    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/
-// @version      0.7
+// @version      0.8
 // @description  Faviconize Google Search
 // @author       glachancecmaisonneuve
 // @icon         https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
@@ -16,13 +16,13 @@
 
 function imgHTML(hostname) {
     if (hostname.includes('github.com')) {
-      return `<img style='position:absolute; overflow:hidden; width:32px; left:-40px; top:0px;' src='https://github.com/apple-touch-icon.png' />`;
+      return `<img style='position:absolute; overflow:hidden; width:32px; left:-40px;' src='https://github.com/apple-touch-icon.png' />`;
     }
     else if (hostname.includes('wikipedia.org')) {
-        return `<img style='position:absolute; overflow:hidden; width:32px; left:-40px; top:0px;' src='https://en.wikipedia.org/apple-touch-icon.png' />`;
+      return `<img style='position:absolute; overflow:hidden; width:32px; left:-40px;' src='https://en.wikipedia.org/apple-touch-icon.png' />`;
     }
   
-    return `<img style='position:absolute; overflow:hidden; width:32px; left:-40px; top:0px;' src='https://www.google.com/s2/favicons?domain=${hostname}' />`;
+    return `<img style='position:absolute; overflow:hidden; width:32px; left:-40px;' src='https://www.google.com/s2/favicons?domain=${hostname}' />`;
 }
 
 function besticon(hostname) {
@@ -30,15 +30,13 @@ function besticon(hostname) {
     return `<img style="position:absolute; overflow:hidden; width:32px; left:-40px; top:0px;" src="${req}" />`;
 }
 
-
-
-Array.from(document.querySelectorAll("div.rc > div > a")).forEach(function(e) {
+Array.from(document.querySelectorAll("div.g > div > div > a")).forEach(function(e) {
     let href = e.hreforiginal || e.href;
     let url = new URL(href);
     if (url.origin.includes('translate') && (url.searchParams.has('u'))) {
         url = new URL(url.searchParams.get('u'));
     }
-    e.closest("div.rc").insertAdjacentHTML("afterBegin", imgHTML(url.hostname));
+    e.closest("div.g").insertAdjacentHTML("afterBegin", imgHTML(url.hostname));
 });
 
 
