@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Favicons Google Search (easy javascript version)
 // @namespace    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/
-// @version      0.8
+// @version      0.9
 // @description  Faviconize Google Search
 // @author       glachancecmaisonneuve
 // @icon         https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
@@ -30,7 +30,7 @@ function besticon(hostname) {
     return `<img style="position:absolute; overflow:hidden; width:32px; left:-40px;" src="${req}" />`;
 }
 
-Array.from(document.querySelectorAll("div.g > div > div > a")).forEach(function(e) {
+Array.from(document.querySelectorAll("div.g > div > div > div > a")).forEach(function(e) {
     let href = e.hreforiginal || e.href;
     let url = new URL(href);
     if (url.origin.includes('translate') && (url.searchParams.has('u'))) {
