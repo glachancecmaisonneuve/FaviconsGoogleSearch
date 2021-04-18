@@ -4,14 +4,13 @@
 // @version      0.9
 // @description  Faviconize Google Search
 // @author       glachancecmaisonneuve
-// @icon         https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
-// @updateurl    https://github.com/glachancecmaisonneuve/FaviconsGoogleSearch/blob/master/FaviconsGoogleSearch.user.js
+// @icon          https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearchIcon.png
+// @updateurl     https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearch.user.js
+// @downloadurl   https://raw.githubusercontent.com/glachancecmaisonneuve/FaviconsGoogleSearch/master/FaviconsGoogleSearch.user.js
 // @match        *://www.google.ca/search*
 // @match        *://www.google.de/search*
 // @match        *://www.google.com/search*
 // @match        *://www.google.*/search*
-// @grant        GM_getValue
-// @grant        GM_setValue
 // // ==/UserScript==
 
 function imgHTML(hostname) {
